@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    new_matrix = []
-    for i in range(len(matrix)):
-        new = []
-        for j in range(len(matrix[i])):
-            new.append((matrix[i][j]) ** 2)
-        new_matrix.append(new)
-    return new_matrix
+    if not matrix:
+        return None
+
+    return list(list(map(lambda a: a*a, num_list)) for num_list in matrix)
